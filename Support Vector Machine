@@ -55,7 +55,7 @@ pair<int, float> SVM::selectJ(int i, float Ei){
 	vector<int> noZeroIndex; //不为0的下标索引值
 	eCache(i, 0) = 1;
 	eCache(i, 1) = Ei;
-	for (int in = 0; in < eCache.rows();in++)
+	for (int in = 0; in < eCache.rows();in++)   //此处可做优化
 		if (eCache(in, 0) != 0)
 			noZeroIndex.push_back(in);
 	if (noZeroIndex.size()>1){
